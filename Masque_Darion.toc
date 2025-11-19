@@ -6,6 +6,7 @@
 
 ## Category: Masque
 ## Dependencies: Masque
+## IconTexture: Interface\AddOns\Masque_Darion\Textures\Icon
 
 ## Notes: Darion skins for Masque.
 ## Notes-deDE: Darion-Skin für Masque.
