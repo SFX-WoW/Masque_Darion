@@ -23,4 +23,4 @@
 ## X-Website: https://github.com/SFX-WoW/Masque_Darion
 
 # Skins
-Darion.lua
+Skins.lua
