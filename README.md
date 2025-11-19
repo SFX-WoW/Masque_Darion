@@ -15,8 +15,8 @@
 
 This set includes the following skins:
 
-- **Darion** - .
-- **Darion Clean** - .
+- **Darion** - A square shadowed skin.
+- **Darion Clean** - A square shadowed skin with an icon frame.
 
 ## [Requirements][Top]
 
@@ -25,10 +25,6 @@ This add-on requires [Masque].
 ## [Installation][Top]
 
 Install the package through your preferred add-on manager or extract the archive to your add-ons directory.
-
-- **Retail:** `World of Warcraft\_retail_\Interface\AddOns`
-- **Classic:** `World of Warcraft\_classic_\Interface\AddOns`
-- **Classic Era:** `World of Warcraft\_classic_era_\Interface\AddOns`
 
 ## [Credits][Top]
 
