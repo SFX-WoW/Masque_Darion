@@ -1,169 +1,113 @@
---[[ Darion skin for Masque ]]
+--[[
 
-local MSQ = LibStub("Masque", true)
-if not MSQ then return end
+	This file is part of 'Masque: Darion', an add-on for World of Warcraft. For bug reports,
+	documentation and license information, please visit https://github.com/SFX-WoW/Masque_Darion.
 
+	* File...: Skins.lua
+	* Authors: StormFX, Darsain
+
+	Darion Skins
+
+]]
+
+local Masque = LibStub("Masque", true)
+
+if not Masque then return end
+
+----------------------------------------
+-- Locals
+---
+
+local API_VERSION = 110207
+
+-- Skin Info
+local Version = "@project-version@"
+local Websites = {
+	"https://github.com/SFX-WoW/Masque_Darion",
+}
+
+local BASE_PATH = [[Interface\AddOns\Masque_Darion\Textures\Base\]]
+local CLEAN_PATH = [[Interface\AddOns\Masque_Darion\Textures\Clean\]]
+
+local OVERLAY = BASE_PATH.."Overlay"
+local HIGHLIGHT = BASE_PATH.."Highlight"
+
+----------------------------------------
 -- Darion
-MSQ:AddSkin("Darion", {
-	Author = "Darsain",
-	Version = "4.1.2",
+---
+
+Masque:AddSkin("Darion", {
+	API_VERSION = API_VERSION,
 	Shape = "Square",
-	Masque_Version = 40200,
+
+	-- Info
+	Authors = {"StormFX", "|cff999999Darsain|r"},
+	--Description = L["A square shadowed skin."],
+	Version = Version,
+	Websites = Websites,
+
+	-- Skin
+	-- Mask = nil,
 	Backdrop = {
 		Width = 40,
 		Height = 40,
 		Color = {0.3, 0.3, 0.3, 1},
-		Texture = [[Interface\AddOns\Masque_Darion\Textures\Backdrop]],
+		Texture = BASE_PATH.."Backdrop",
 	},
 	Icon = {
 		Width = 34,
 		Height = 34,
 	},
-	Flash = {
-		Width = 40,
-		Height = 40,
-		Color = {1, 1, 1, 1},
-		Texture = [[Interface\AddOns\Masque_Darion\Textures\Overlay]],
-	},
+	SlotIcon = "Icon",
 	Cooldown = {
 		Width = 34,
 		Height = 34,
-	},
-	Pushed = {
-		Width = 40,
-		Height = 40,
-		Color = {1, 1, 1, 1},
-		Texture = [[Interface\AddOns\Masque_Darion\Textures\Overlay]],
 	},
 	Normal = {
 		Width = 40,
 		Height = 40,
 		Color = {0, 0, 0, 1},
-		Texture = [[Interface\AddOns\Masque_Darion\Textures\Normal]],
-	},
-	Disabled = {
-		Hide = true,
-	},
-	Checked = {
-		Width = 40,
-		Height = 40,
-		BlendMode = "ADD",
-		Color = {1, 1, 1, 1},
-		Texture = [[Interface\AddOns\Masque_Darion\Textures\Highlight]],
-	},
-	Border = {
-		Width = 40,
-		Height = 40,
-		BlendMode = "DISABLE",
-		Texture = [[Interface\AddOns\Masque_Darion\Textures\Border]],
-	},
-	Gloss = {
-		Width = 40,
-		Height = 40,
-		Texture = [[Interface\AddOns\Masque_Darion\Textures\Gloss]],
-	},
-	AutoCastable = {
-		Width = 34,
-		Height = 34,
-		OffsetX = 0.5,
-		OffsetY = -0.5,
-		Texture = [[Interface\Buttons\UI-AutoCastableOverlay]],
-	},
-	Highlight = {
-		Width = 40,
-		Height = 40,
-		BlendMode = "ADD",
-		Texture = [[Interface\AddOns\Masque_Darion\Textures\Highlight]],
-	},
-	Name = {
-		Width = 32,
-		Height = 10,
-		OffsetX = 0,
-		OffsetY = 5,
-	},
-	Count = {
-		Width = 32,
-		Height = 10,
-		OffsetX = -4,
-		OffsetY = 5,
-	},
-	HotKey = {
-		Width = 32,
-		Height = 10,
-		OffsetX = 4,
-		OffsetY = -6,
-	},
-	Duration = {
-		Width = 32,
-		Height = 10,
-		OffsetY = -2,
-	},
-	AutoCast = {
-		Width = 26,
-		Height = 26,
-		OffsetX = 1,
-		OffsetY = -1,
-	},
-}, true)
-
--- Darion Clean (old version)
-MSQ:AddSkin("Darion Clean", {
-	Author = "Darsain",
-	Version = "4.1.2",
-	Shape = "Square",
-	Masque_Version = 40200,
-	Backdrop = {
-		Width = 40,
-		Height = 40,
-		Color = {0.3, 0.3, 0.3, 1},
-		Texture = [[Interface\AddOns\Masque_Darion\Textures\Backdrop]],
-	},
-	Icon = {
-		Width = 34,
-		Height = 34,
-	},
-	Flash = {
-		Width = 40,
-		Height = 40,
-		Color = {1, 1, 1, 1},
-		Texture = [[Interface\AddOns\Masque_Darion\Textures\Overlay]],
-	},
-	Cooldown = {
-		Width = 34,
-		Height = 34,
+		Texture = BASE_PATH.."Normal",
 	},
 	Pushed = {
 		Width = 40,
 		Height = 40,
 		Color = {1, 1, 1, 1},
-		Texture = [[Interface\AddOns\Masque_Darion\Textures\Overlay]],
+		Texture = OVERLAY,
 	},
-	Normal = {
+	Flash = {
 		Width = 40,
 		Height = 40,
-		Color = {0.2, 0.2, 0.2, 1},
-		Texture = [[Interface\AddOns\Masque_Darion\Textures\Normal_clean]],
-	},
-	Disabled = {
-		Hide = true,
+		Color = {1, 1, 1, 1},
+		Texture = OVERLAY,
 	},
 	Checked = {
 		Width = 40,
 		Height = 40,
 		BlendMode = "ADD",
 		Color = {1, 1, 1, 1},
-		Texture = [[Interface\AddOns\Masque_Darion\Textures\Highlight]],
+		Texture = HIGHLIGHT,
 	},
+	SlotHighlight = "Checked",
 	Border = {
 		Width = 40,
 		Height = 40,
-		BlendMode = "DISABLE",
-		Texture = [[Interface\AddOns\Masque_Darion\Textures\Border]],
+		BlendMode = "BLEND",
+		Texture = BASE_PATH.."Border",
 	},
+	DebuffBorder = "Border",
+	EnchantBorder = "Border",
+	IconBorder = "Border",
 	Gloss = {
 		Width = 40,
 		Height = 40,
-		Texture = [[Interface\AddOns\Masque_Darion\Textures\Gloss_clean]],
+		Texture = BASE_PATH.."Gloss",
+	},
+	Highlight = {
+		Width = 40,
+		Height = 40,
+		BlendMode = "ADD",
+		Texture = HIGHLIGHT,
 	},
 	AutoCastable = {
 		Width = 34,
@@ -172,17 +116,35 @@ MSQ:AddSkin("Darion Clean", {
 		OffsetY = -0.5,
 		Texture = [[Interface\Buttons\UI-AutoCastableOverlay]],
 	},
-	Highlight = {
-		Width = 40,
-		Height = 40,
-		BlendMode = "ADD",
-		Texture = [[Interface\AddOns\Masque_Darion\Textures\Highlight]],
+	AutoCast = {
+		Width = 26,
+		Height = 26,
+		OffsetX = 1,
+		OffsetY = -1,
 	},
-	Name = {
-		Width = 32,
-		Height = 10,
-		OffsetX = 0,
-		OffsetY = 5,
+	SpellAlert = {
+		Height = 36,
+		Width = 36,
+		AltGlow = {
+			Height = 44,
+			Width = 44,
+		},
+		Classic = {
+			Height = 30,
+			Width = 30,
+		},
+		Modern = {
+			Height = 30,
+			Width = 30,
+		},
+		["Modern-Lite"] = {
+			Height = 31,
+			Width = 31,
+		},
+	},
+	AssistedCombatHighlight = {
+		Width = 44,
+		Height = 44,
 	},
 	Count = {
 		Width = 32,
@@ -201,10 +163,32 @@ MSQ:AddSkin("Darion Clean", {
 		Height = 10,
 		OffsetY = -2,
 	},
-	AutoCast = {
-		Width = 26,
-		Height = 26,
-		OffsetX = 1,
-		OffsetY = -1,
+	Name = {
+		Width = 32,
+		Height = 10,
+		OffsetX = 0,
+		OffsetY = 5,
 	},
-}, true)
+})
+
+----------------------------------------
+-- Darion Clean
+---
+
+Masque:AddSkin("Darion Clean", {
+	Template = "Darion",
+
+	--Description = L["A square shadowed skin with an icon frame."],
+
+	Normal = {
+		Width = 40,
+		Height = 40,
+		Color = {0.2, 0.2, 0.2, 1},
+		Texture = CLEAN_PATH.."Normal",
+	},
+	Gloss = {
+		Width = 40,
+		Height = 40,
+		Texture = CLEAN_PATH.."Gloss",
+	},
+})
