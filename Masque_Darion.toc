@@ -9,11 +9,11 @@
 ## IconTexture: Interface\AddOns\Masque_Darion\Textures\Icon
 
 ## Notes: Darion skins for Masque.
-## Notes-deDE: Darion-Skin für Masque.
-## Notes-esMX: Skin Darion para Masque.
-## Notes-esES: Skin Darion para Masque.
-## Notes-frFR: Skin de Darion pour Masque.
-## Notes-itIT: Skin Darion per Masque.
+## Notes-deDE: Darion-Skins für Masque.
+## Notes-esMX: Skins Darion para Masque.
+## Notes-esES: Skins Darion para Masque.
+## Notes-frFR: Skins de Darion pour Masque.
+## Notes-itIT: Skins Darion per Masque.
 ## Notes-ruRU: Скин Darion для Masque.
 ## Notes-zhTW: Masque的Darion皮膚。
 
@@ -21,6 +21,13 @@
 ## X-Credits: Darsain
 ## X-Discord: https://discord.gg/7MTWRgDzz8
 ## X-Website: https://github.com/SFX-WoW/Masque_Darion
+
+## X-Curse-Project-ID: 1388046
+## X-Wago-ID: YK9E3XKL
+## X-WoWI-ID: 26992
+
+# Locales
+Locales.lua
 
 # Skins
 Skins.lua

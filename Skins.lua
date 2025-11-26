@@ -15,6 +15,13 @@ local Masque = LibStub("Masque", true)
 if not Masque then return end
 
 ----------------------------------------
+-- Internal
+---
+
+local _, Core = ...
+local L = Core.Locale
+
+----------------------------------------
 -- Locals
 ---
 
@@ -24,6 +31,9 @@ local API_VERSION = 110207
 local Version = "@project-version@"
 local Websites = {
 	"https://github.com/SFX-WoW/Masque_Darion",
+	"https://www.curseforge.com/wow/addons/masque-darion",
+	"https://addons.wago.io/addons/masque-darion",
+	"https://www.wowinterface.com/downloads/info26992",
 }
 
 local BASE_PATH = [[Interface\AddOns\Masque_Darion\Textures\Base\]]
@@ -42,7 +52,7 @@ Masque:AddSkin("Darion", {
 
 	-- Info
 	Authors = {"StormFX", "|cff999999Darsain|r"},
-	--Description = L["A square shadowed skin."],
+	Description = L["A square shadowed skin."],
 	Version = Version,
 	Websites = Websites,
 
@@ -178,7 +188,7 @@ Masque:AddSkin("Darion", {
 Masque:AddSkin("Darion Clean", {
 	Template = "Darion",
 
-	--Description = L["A square shadowed skin with an icon frame."],
+	Description = L["A square shadowed skin with an icon frame."],
 
 	Normal = {
 		Width = 40,
