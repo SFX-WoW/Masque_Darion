@@ -66,7 +66,7 @@ To help translate this add-on, use the [localization system]. Alternatively, you
 [GitHub]: https://github.com/SFX-WoW/Masque_Darion (View on GitHub)
 [CurseForge]: https://www.curseforge.com/wow/addons/masque-darion (View on CurseForge)
 [Wago.io]: https://addons.wago.io/addons/masque-darion (View on Wago.io)
-[WoW Interface]: https://www.wowinterface.com/downloads/info26494 (View on WoW Interface)
+[WoW Interface]: https://www.wowinterface.com/downloads/info26992 (View on WoW Interface)
 
 [//]: # (Images)
 
