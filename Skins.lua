@@ -10,15 +10,15 @@
 
 ]]
 
-local Masque = LibStub("Masque", true)
-
+local Masque = LibStub and LibStub("Masque", true)
 if not Masque then return end
+
+local _, Core = ...
 
 ----------------------------------------
 -- Internal
 ---
 
-local _, Core = ...
 local L = Core.Locale
 
 ----------------------------------------
@@ -50,14 +50,18 @@ Masque:AddSkin("Darion", {
 	API_VERSION = API_VERSION,
 	Shape = "Square",
 
-	-- Info
+	-- [ Info ]
 	Authors = {"StormFX", "|cff999999Darsain|r"},
 	Description = L["A square shadowed skin."],
 	Discord = "https://discord.gg/7MTWRgDzz8",
 	Version = Version,
 	Websites = Websites,
 
-	-- Skin
+	-- [ UI ]
+	Group = "Darion",
+	Order = 1,
+
+	-- [ Skin ]
 	-- Mask = nil,
 	Backdrop = {
 		Texture = BASE_PATH.."Backdrop",
@@ -109,11 +113,12 @@ Masque:AddSkin("Darion", {
 		-- SetAllPoints = nil,
 		-- UseStates = true,
 	},
+	-- Disabled = Default.Disabled,
 	Pushed = {
 		Texture = OVERLAY,
 		-- TexCoords = {0, 1, 0, 1},
 		-- Color = {1, 1, 1, 1},
-		-- BlendMode = "BLEND",
+		BlendMode = "BLEND",
 		-- DrawLayer = "ARTWORK",
 		-- DrawLevel = 0,
 		Width = 40,
@@ -129,7 +134,7 @@ Masque:AddSkin("Darion", {
 		Texture = OVERLAY,
 		-- TexCoords = {0, 1, 0, 1},
 		-- Color = {1, 1, 1, 1},
-		-- BlendMode = "BLEND",
+		BlendMode = "BLEND",
 		-- DrawLayer = "ARTWORK",
 		-- DrawLevel = 1,
 		Width = 40,
@@ -206,8 +211,8 @@ Masque:AddSkin("Darion", {
 		-- DrawLayer = "OVERLAY",
 		-- Width = 36,
 		-- Height = 0,
-		Point = "BOTTOM",
-		RelPoint = "BOTTOM",
+		-- Point = "BOTTOM",
+		-- RelPoint = "BOTTOM",
 		-- OffsetX = 0,
 		OffsetY = 3,
 	},
@@ -217,8 +222,8 @@ Masque:AddSkin("Darion", {
 		-- DrawLayer = "OVERLAY",
 		-- Width = 36,
 		-- Height = 0,
-		Point = "TOP",
-		RelPoint = "BOTTOM",
+		-- Point = "TOP",
+		-- RelPoint = "BOTTOM",
 		-- OffsetX = 0,
 		OffsetY = -2,
 	},
@@ -226,7 +231,7 @@ Masque:AddSkin("Darion", {
 		Texture = HIGHLIGHT,
 		-- TexCoords = {0, 1, 0, 1},
 		-- Color = {1, 1, 1, 1},
-		-- BlendMode = "ADD",
+		BlendMode = "ADD",
 		-- DrawLayer = "HIGHLIGHT",
 		-- DrawLevel = 0,
 		Width = 40,
@@ -245,8 +250,8 @@ Masque:AddSkin("Darion", {
 		-- DrawLayer = "OVERLAY",
 		-- Width = 32,
 		-- Height = 10,
-		Point = "TOPRIGHT",
-		RelPoint = "TOPRIGHT",
+		-- Point = "TOPRIGHT",
+		-- RelPoint = "TOPRIGHT",
 		OffsetX = -2,
 		OffsetY = -2,
 	},
@@ -256,8 +261,8 @@ Masque:AddSkin("Darion", {
 		-- DrawLayer = "OVERLAY",
 		-- Width = 0,
 		-- Height = 0,
-		Point = "BOTTOMRIGHT",
-		RelPoint = "BOTTOMRIGHT",
+		-- Point = "BOTTOMRIGHT",
+		-- RelPoint = "BOTTOMRIGHT",
 		OffsetX = -2,
 		OffsetY = 2,
 	},
@@ -288,19 +293,6 @@ Masque:AddSkin("Darion", {
 	},
 	-- [ AutoCastOverlay (Retail) ]
 	-- AutoCast_Frame = Default.AutoCast_Frame,
-	AutoCast_Mask = {
-		-- Atlas = "UI-HUD-ActionBar-PetAutoCast-Mask",
-		-- UseAtlasSize = false,
-		Texture = [[Interface\AddOns\Masque\Textures\Modern\AutoCast-Mask]],
-		-- TexCoords = {0, 1, 0, 1},
-		Width = 34,
-		Height = 34,
-		-- Point = "CENTER",
-		-- RelPoint = "CENTER",
-		-- OffsetX = 0,
-		-- OffsetY = 0,
-		-- SetAllPoints = nil,
-	},
 	AutoCast_Shine = {
 		Atlas = "UI-HUD-ActionBar-PetAutoCast-Ants",
 		-- UseAtlasSize = false,
@@ -316,11 +308,24 @@ Masque:AddSkin("Darion", {
 		-- OffsetY = 0,
 		-- SetAllPoints = nil,
 	},
+	AutoCast_Mask = {
+		-- Atlas = "UI-HUD-ActionBar-PetAutoCast-Mask",
+		-- UseAtlasSize = false,
+		Texture = [[Interface\AddOns\Masque\Textures\Modern\AutoCast-Mask]],
+		-- TexCoords = {0, 1, 0, 1},
+		Width = 34,
+		Height = 34,
+		-- Point = "CENTER",
+		-- RelPoint = "CENTER",
+		-- OffsetX = 0,
+		-- OffsetY = 0,
+		-- SetAllPoints = nil,
+	},
 	-- AutoCast_Corners = Default.AutoCast_Corners,
 	-- [ Cooldowns ]
 	Cooldown = {
-		-- Texture = [[Interface\AddOns\Masque\Textures\Modern\Mask]],
-		-- EdgeTexture = [[Interface\AddOns\Masque\Textures\Modern\Edge]],
+		Texture = [[Interface\AddOns\Masque\Textures\Modern\Mask]],
+		EdgeTexture = [[Interface\AddOns\Masque\Textures\Modern\Edge]],
 		-- PulseTexture = [[Interface\Cooldown\star4]],
 		-- Color = {0, 0, 0, 0.8},
 		Width = 34,
@@ -369,14 +374,19 @@ Masque:AddSkin("Darion Clean", {
 	-- Shape = Template.Shape,
 	Template = "Darion",
 
-	-- Info
+	-- [ Info ]
 	-- Authors = Template.Authors,
 	Description = L["A square shadowed skin with an icon frame."],
 	-- Discord = Template.Discord,
 	-- Version = Template.Version,
 	-- Websites = Template.Websites,
 
-	-- Skin
+	-- [ UI ]
+	-- Group = Template.Group,
+	Order = 2,
+	Title = "Clean",
+
+	-- [ Skin ]
 	-- Mask = Template.Mask,
 	-- Backdrop = Template.Backdrop,
 	-- Icon = Template.Icon,
