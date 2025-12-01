@@ -1,10 +1,12 @@
-## 11.2.6
+## 11.2.7
 
 ### Release Notes
 
-- Added localization strings.
-- Updated and optimized the skin definitions.
-- Updated website links.
-- Tweaked the text layers.
+- Added **Discord** to the skin info.
+- Updated the `Interface` versions: (#5)
+  - **Wrath of the Lich King Classic** Titan Reforged: `38000`
+  - **The Burning Crusade Classic** Anniversary Edition: `20505`
+- Updated `ruRU`. (ZamestoTV)(#4)
+- Updated the skin definitions.
 
 [Release History](https://github.com/SFX-WoW/Masque_Darion/wiki/History)
