@@ -46,5 +46,7 @@ elseif Locale == "ruRU" then
 	L["A square shadowed skin with an icon frame."] = "Квадратный затененный скин с рамкой значка."
 	L["A square shadowed skin."] = "Квадратный затененный скин."
 --elseif Locale == "zhCN" then
--- elseif Locale == "zhTW" then
+elseif Locale == "zhTW" then
+	L["A square shadowed skin with an icon frame."] = "一個方形暗影外觀，帶有圖示框架。"
+	L["A square shadowed skin."] = "一個方形暗影外觀。"
 end
