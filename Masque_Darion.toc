@@ -14,8 +14,9 @@
 ## Notes-esES: Skins Darion para Masque.
 ## Notes-frFR: Skins de Darion pour Masque.
 ## Notes-itIT: Skins Darion per Masque.
-## Notes-ruRU: Скин Darion для Masque.
-## Notes-zhTW: Masque的Darion皮膚。
+## Notes-ptBR: Aparências Darion para o Masque.
+## Notes-ruRU: Darion скин для Masque.
+## Notes-zhTW: Masque的Darion外觀。
 
 ## X-Category: Interface Enhancements
 ## X-Credits: Darsain
