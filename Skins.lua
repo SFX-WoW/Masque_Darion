@@ -25,7 +25,7 @@ local L = Core.Locale
 -- Locals
 ---
 
-local API_VERSION = 120000
+local API_VERSION = 120100
 
 -- Skin Info
 local Version = "@project-version@"
@@ -143,22 +143,17 @@ Masque:AddSkin("Darion", {
 		OffsetX = -2,
 		OffsetY = -2,
 	},
-	-- [ AutoCastShine (Classic) ]
-	AutoCastable = {
-		Texture = [[Interface\Buttons\UI-AutoCastableOverlay]],
-		Width = 34,
-		Height = 34,
-		OffsetX = 0.5,
-		OffsetY = -0.5,
+	-- [ AutoCastOverlay ]
+	AutoCast_Frame = {
+		Width = 37,
+		Height = 37,
+		Classic = {
+			Width = 26,
+			Height = 26,
+			OffsetX = 1,
+			OffsetY = -1,
+		},
 	},
-	AutoCastShine = {
-		Width = 26,
-		Height = 26,
-		OffsetX = 1,
-		OffsetY = -1,
-	},
-	-- [ AutoCastOverlay (Retail) ]
-	-- AutoCast_Frame = Default.AutoCast_Frame,
 	AutoCast_Shine = {
 		Atlas = "UI-HUD-ActionBar-PetAutoCast-Ants",
 		Width = 54,
@@ -169,8 +164,18 @@ Masque:AddSkin("Darion", {
 		Width = 34,
 		Height = 34,
 	},
-	-- AutoCast_Corners = Default.AutoCast_Corners,
-	-- [ Cooldowns ]
+	AutoCast_Corners = {
+		Atlas = "UI-HUD-ActionBar-PetAutoCast-Corners",
+		SetAllPoints = true,
+		Classic = {
+			Atlas = "UI-HUD-ActionBar-PetAutoCast-Corners",
+			Width = 56,
+			Height = 56,
+			OffsetX = -0.5,
+			OffsetY = 0.5,
+		},
+	},
+	-- [ Cooldown ]
 	Cooldown = {
 		Texture = [[Interface\AddOns\Masque\Textures\Modern\Mask]],
 		EdgeTexture = [[Interface\AddOns\Masque\Textures\Modern\Edge]],
@@ -180,7 +185,7 @@ Masque:AddSkin("Darion", {
 	},
 	CooldownLoC = "Cooldown",
 	ChargeCooldown = "Cooldown",
-	-- [ SpellAlerts ]
+	-- [ SpellAlert ]
 	SpellAlert = {
 		Height = 36,
 		Width = 36,
